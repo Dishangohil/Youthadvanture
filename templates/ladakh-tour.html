@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ladakh Group Tours - YouthAdventura</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f7fb;
+    }
+    .header {
+      background: linear-gradient(to right, #007991, #78ffd6);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      border-radius: 0 0 40px 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .header h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .section-content {
+      padding: 40px 20px;
+    }
+    .tour-info img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .tour-info h3 {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #00796b;
+    }
+    .highlight-item {
+      text-align: center;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+    .highlight-item i {
+      font-size: 28px;
+      color: #00796b;
+      margin-bottom: 10px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .itinerary {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      margin-top: 50px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+    }
+    .cta-btn {
+      margin-top: 30px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Ladakh Group Tours</h1>
+    <p>Conquer the mountains with our scenic and safe SUV adventures 🏔️</p>
+  </div>
+
+  <div class="container section-content">
+
+    <!-- About Section -->
+    <div class="row align-items-center tour-info">
+      <div class="col-md-6">
+        <img src="{{ url_for('static', filename='images/ladakh.jpg') }}" alt="Ladakh Tour">
+      </div>
+      <div class="col-md-6">
+        <h3>About the Tour</h3>
+        <p>
+          Our Ladakh SUV tours take you through the stunning Himalayas in comfort and safety. Explore Leh, Nubra Valley, Pangong Lake, and the hidden village of Turtuk with expert guides.
+        </p>
+        <p>
+          Travel with like-minded explorers, enjoy warm stays, and soak in surreal landscapes of snow, desert, and alpine lakes.
+        </p>
+      </div>
+    </div>
+
+    <!-- Highlights -->
+    <div class="row text-center mt-5 g-4">
+      <div class="col-md-3 highlight-item">
+        <i class="fas fa-car-side"></i>
+        <h6>Comfortable SUVs</h6>
+      </div>
+      <div class="col-md-3 highlight-item">
+        <i class="fas fa-user-shield"></i>
+        <h6>Local Guides</h6>
+      </div>
+      <div class="col-md-3 highlight-item">
+        <i class="fas fa-snowflake"></i>
+        <h6>Winter Ready</h6>
+      </div>
+      <div class="col-md-3 highlight-item">
+        <i class="fas fa-mountain"></i>
+        <h6>Scenic Routes</h6>
+      </div>
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery row g-4 mt-5">
+      <div class="col-md-4">
+        <img src="{{ url_for('static', filename='images/ladakh1.jpg') }}" alt="Nubra Valley">
+      </div>
+      <div class="col-md-4">
+        <img src="{{ url_for('static', filename='images/ladakh3.jpg') }}" alt="Pangong Lake">
+      </div>
+      <div class="col-md-4">
+        <img src="{{ url_for('static', filename='images/ladakh4.jpg') }}" alt="Turtuk Village">
+      </div>
+    </div>
+
+    <!-- Itinerary -->
+    <div class="itinerary mt-5">
+      <h4>Sample Itinerary</h4>
+      <ul>
+        <li><strong>Day 1:</strong> Arrive in Leh + Acclimatization Walk</li>
+        <li><strong>Day 2:</strong> Drive to Nubra via Khardung La</li>
+        <li><strong>Day 3:</strong> Explore Turtuk + Cultural Village Stay</li>
+        <li><strong>Day 4:</strong> Pangong Lake Night Camp</li>
+        <li><strong>Day 5:</strong> Return to Leh + Local Market</li>
+      </ul>
+    </div>
+
+    <!-- Back Button -->
+    <div class="back-btn text-center mt-4">
+      <a href="{{ url_for('theme') }}" class="btn btn-dark"><i class="fas fa-arrow-left me-2"></i>Back to Themes</a>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-btn">
+      <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">Book This Tour Now</a>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center text-muted py-4">
+    <p>&copy; 2025 YouthAdventura. All Rights Reserved.</p>
+    <p>📞 +91‑78279‑56056 | ✉️ info@youthadventura.com</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

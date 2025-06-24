@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tour Themes - YouthAdventura</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ <style>
+  body {
+    background-color: #f4f4f4;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+  }
+
+  .theme-title {
+    text-align: center;
+    margin: 40px 0 30px;
+    color: #1e3d59;
+    font-weight: bold;
+    font-size: 32px;
+  }
+
+  .theme-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    background: #fff;
+  }
+
+  .theme-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    transition: 0.4s ease;
+    display: block;
+  }
+
+  .theme-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .theme-card h4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .theme-card img.hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.4s ease;
+  }
+
+  .theme-card:hover img.hover-img {
+    opacity: 1;
+  }
+
+  .theme-card:hover img.default-img {
+    opacity: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .btn-dark {
+    background-color: #1e3d59;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+
+  .btn-dark:hover {
+    background-color: #163043;
+  }
+
+  /* Footer Styling */
+  footer {
+    background-color: #1e3d59;
+    color: #ddd;
+    padding: 30px 0;
+    font-size: 15px;
+  }
+
+  footer p {
+    margin: 5px 0;
+  }
+
+  footer a {
+    color: #86e01e;
+    margin: 0 10px;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+
+  footer a:hover {
+    color: #ffffff;
+  }
+
+  footer .fab {
+    font-size: 20px;
+  }
+</style>
+
+</head>
+<body>
+
+  <div class="container">
+    <h2 class="theme-title">Explore Tour Themes</h2>
+    <div class="row g-4">
+
+      <!-- Card 1 - Ladakh -->
+      <div class="col-md-4">
+        <a href="{{ url_for('ladakh_tour') }}">
+          <div class="theme-card hover-image">
+            <img src="{{ url_for('static', filename='images/ladakh.jpg') }}" alt="Ladakh Tour" class="default-img">
+            <img src="{{ url_for('static', filename='images/leh-gallery4.jpg') }}" alt="Ladakh Hover" class="hover-img">
+            <h4>Ladakh Tour Packages</h4>
+          </div>
+        </a>
+      </div>
+
+      <!-- Card 2 - Family Tours -->
+      <div class="col-md-4">
+      <a href="{{ url_for('family_tour') }}">
+          <div class="theme-card hover-image">
+            <img src="{{ url_for('static', filename='images/ladakh1.jpg') }}" alt="Family Tour" class="default-img">
+            <img src="{{ url_for('static', filename='images/ladakhh.jpg') }}" alt="Family Tour Hover" class="hover-img">
+            <h4>Family Tours</h4>
+          </div>
+        </a>
+      </div>
+
+      <!-- Card 3 - MotorBike Tour -->
+<div class="col-md-4">
+  <a href="{{ url_for('motorbike_tour') }}" style="text-decoration: none;">
+    <div class="theme-card hover-image">
+      <img src="{{ url_for('static', filename='images/a4.jpg') }}" alt="MotorBike Tour" class="default-img">
+      <img src="{{ url_for('static', filename='images/lride5.jpg') }}" alt="MotorBike Hover" class="hover-img">
+      <h4>MotorBike Tour</h4>
+    </div>
+  </a>
+</div>
+
+
+      <!-- Card 4 - Romantic Getaways -->
+<div class="col-md-4">
+  <a href="{{ url_for('romantic_tour') }}" style="text-decoration: none;">
+    <div class="theme-card hover-image">
+      <img src="{{ url_for('static', filename='images/ladakh2.jpg') }}" alt="Romantic Tour" class="default-img">
+      <img src="{{ url_for('static', filename='images/romantic1.jpg') }}" alt="Romantic Tour Hover" class="hover-img">
+      <h4>Romantic Getaways</h4>
+    </div>
+  </a>
+</div>
+
+      <!-- Card 5 - College Tours -->
+<div class="col-md-4">
+  <a href="{{ url_for('college_tour') }}" style="text-decoration: none;">
+    <div class="theme-card hover-image">
+      <img src="{{ url_for('static', filename='images/grp1.jpg') }}" alt="College Tour" class="default-img">
+      <img src="{{ url_for('static', filename='images/grp2.jpg') }}" alt="College Hover" class="hover-img">
+      <h4>College Tour</h4>
+    </div>
+  </a>
+</div>
+
+      <!-- Card 6 - Weekend Getaways -->
+<div class="col-md-4">
+  <a href="{{ url_for('weekend_tour') }}" style="text-decoration: none;">
+    <div class="theme-card hover-image">
+      <img src="{{ url_for('static', filename='images/week1.jpg') }}" alt="Weekend Tour" class="default-img">
+      <img src="{{ url_for('static', filename='images/week2.jpg') }}" alt="Weekend Hover" class="hover-img">
+      <h4>Weekend Getaways</h4>
+    </div>
+  </a>
+</div>
+
+
+     <!-- Card 7 - Women Only -->
+<div class="col-md-4">
+  <a href="{{ url_for('women_tour') }}" style="text-decoration: none;">
+    <div class="theme-card hover-image">
+      <img src="{{ url_for('static', filename='images/ladakh5.jpg') }}" alt="Women Tour" class="default-img">
+      <img src="{{ url_for('static', filename='images/women.jpg') }}" alt="Women Hover" class="hover-img">
+      <h4>Women Only Tours</h4>
+    </div>
+  </a>
+</div>
+
+    </div>
+
+    <!-- Back Button -->
+    <div class="text-center mt-4">
+      <a href="{{ url_for('home') }}" class="btn btn-dark"><i class="fas fa-arrow-left me-2"></i>Back to Home</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center mt-5">
+    <div class="container">
+      <p class="mb-1">&copy; 2025 YouthAdventura. All Rights Reserved.</p>
+      <p>Call: +91‑78279‑56056 | Email: info@youthadventura.com</p>
+      <div>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

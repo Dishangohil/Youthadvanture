@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leh Ladakh Itinerary - YouthAdventura</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+    }
+
+    .video-header video {
+      width: 100%;
+      height: 60vh;
+      object-fit: cover;
+      display: block;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #1a3e5c;
+      position: relative;
+      padding-bottom: 10px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .section-title::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      height: 4px;
+      width: 80px;
+      background: linear-gradient(to right, #00BFFF, #0099FF);
+      border-radius: 2px;
+    }
+
+    .custom-itinerary {
+      padding: 30px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      max-width: 900px;
+      margin: auto;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .quote-box {
+      background: #e6f7ff;
+      border-left: 6px solid #00BFFF;
+      padding: 30px 40px;
+      max-width: 900px;
+      margin: 50px auto;
+      border-radius: 10px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+      font-style: italic;
+    }
+
+    .quote-box blockquote {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .blockquote-footer {
+      font-style: normal;
+      font-size: 0.95rem;
+      color: #666;
+      text-align: right;
+    }
+
+    .image-gallery img {
+      border-radius: 8px;
+      transition: 0.3s ease;
+    }
+
+    .image-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer a {
+      margin: 0 10px;
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Hero Video Header -->
+<header class="video-header">
+  <video autoplay muted loop playsinline>
+    <source src="{{ url_for('static', filename='images/leh.mp4') }}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</header>
+
+<!-- Itinerary -->
+<section class="container py-5">
+  <h2 class="section-title">6-Day Leh Ladakh Itinerary</h2>
+  <ol class="custom-itinerary">
+    <li><strong>Day 1:</strong> Arrive in Leh, rest and acclimatize. Visit Leh Market.</li>
+    <li><strong>Day 2:</strong> Visit Shanti Stupa, Leh Palace, Hall of Fame.</li>
+    <li><strong>Day 3:</strong> Drive to Nubra Valley via Khardung La Pass.</li>
+    <li><strong>Day 4:</strong> Explore Diskit Monastery and sand dunes. Camel ride.</li>
+    <li><strong>Day 5:</strong> Drive to Pangong Lake. Overnight near the lake.</li>
+    <li><strong>Day 6:</strong> Return to Leh and depart.</li>
+  </ol>
+</section>
+
+<!-- Image Gallery -->
+<section class="container py-5">
+  <h2 class="section-title">Scenic Highlights</h2>
+  <div class="row g-4 text-center">
+    <div class="col-md-4"><img src="{{ url_for('static', filename='images/leh1.jpg') }}" class="img-fluid"><p class="mt-2">Khardung La</p></div>
+    <div class="col-md-4"><img src="{{ url_for('static', filename='images/leh2.jpg') }}" class="img-fluid"><p class="mt-2">Pangong Lake</p></div>
+    <div class="col-md-4"><img src="{{ url_for('static', filename='images/leh3.jpg') }}" class="img-fluid"><p class="mt-2">Nubra Valley</p></div>
+  </div>
+</section>
+
+<!-- Activities -->
+<section class="container py-5">
+  <h2 class="section-title">Top Experiences</h2>
+  <div class="row g-4 text-center">
+    <div class="col-md-3"><i class="fas fa-mountain fa-2x text-primary"></i><p>Mountain Pass Drive</p></div>
+    <div class="col-md-3"><i class="fas fa-campground fa-2x text-success"></i><p>Camping at Pangong</p></div>
+    <div class="col-md-3"><i class="fas fa-motorcycle fa-2x text-warning"></i><p>Bike Ride</p></div>
+    <div class="col-md-3"><i class="fas fa-praying-hands fa-2x text-danger"></i><p>Monastery Visits</p></div>
+  </div>
+</section>
+
+<!-- Quote -->
+<div class="quote-box mt-5">
+  <blockquote>
+    <p>“The journey to Leh was soul-stirring. Breathtaking landscapes, calm monasteries, and the unforgettable Pangong night sky!”</p>
+    <footer class="blockquote-footer mt-2">— A Leh Explorer</footer>
+  </blockquote>
+</div>
+
+<!-- Back Button -->
+    <div class="back-btn">
+      <a href="{{ url_for('home') }}" class="btn btn-dark"><i class="fas fa-arrow-left me-2"></i>Back to Home</a>
+    </div>
+  </div>
+
+<!-- Footer -->
+<footer class="text-center py-4 bg-light">
+  <div class="container">
+    <p class="mb-1">&copy; 2025 YouthAdventura. All Rights Reserved.</p>
+    <p>Call: +91‑78279‑56056 | Email: info@youthadventura.com</p>
+    <div>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
