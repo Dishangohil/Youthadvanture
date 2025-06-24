@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Blog - YouthAdventura</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f7f9fc;
+      padding: 40px 20px;
+    }
+    h1 {
+      color: #4a148c;
+      text-align: center;
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
+    .card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+      height: 100%;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .card img {
+      height: 200px;
+      object-fit: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    .card-title a {
+      text-decoration: none;
+      color: #333;
+    }
+    .card-title a:hover {
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Travel Blogs & Stories</h1>
+
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Blog 1 -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <a href="https://travellingslacker.com/" target="_blank">
+            <img src="{{ url_for('static', filename='images/blog1.jpg') }}" class="card-img-top" alt="Travelling Slacker">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="https://travellingslacker.com/" target="_blank">
+                The Travelling Slacker – Himalayan Gems
+              </a>
+            </h5>
+            <p class="card-text">Offbeat travel through Himachal & Northeast India—sharing local culture, trails, and hidden valleys.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog 2 -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <a href="https://footloosedev.com/himachal-pradesh-travel-guide/" target="_blank">
+            <img src="{{ url_for('static', filename='images/blog2.jpg') }}" class="card-img-top" alt="FootLoose Dev">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="https://footloosedev.com/himachal-pradesh-travel-guide/" target="_blank">
+                FootLoose Dev – Himachal Travel Guide
+              </a>
+            </h5>
+            <p class="card-text">Top places to see in Himachal Pradesh—from Atal Tunnel to Parvati Valley.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog 3 -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <a href="https://www.ravenouslegs.com/himachal-pradesh-travel-blog.html" target="_blank">
+            <img src="{{ url_for('static', filename='images/blog3.jpg') }}" class="card-img-top" alt="RavenousLegs">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="https://www.ravenouslegs.com/himachal-pradesh-travel-blog.html" target="_blank">
+                RavenousLegs – Himachal P’s Adventure Blog
+              </a>
+            </h5>
+            <p class="card-text">Trekking, rafting, paragliding, eco-travel and spiritual escapes across Himachal.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog 4 -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <a href="https://www.experiencetravelgroup.com/blog/travel-guide-himachal-pradesh-india/" target="_blank">
+            <img src="{{ url_for('static', filename='images/blog4.jpg') }}" class="card-img-top" alt="ExperienceTravelGroup">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="https://www.experiencetravelgroup.com/blog/travel-guide-himachal-pradesh-india/" target="_blank">
+                ExperienceTravelGroup – Himalayan Travel Guide
+              </a>
+            </h5>
+            <p class="card-text">An intrepid travel guide covering Shimla, Manali, trekking and monasteries in Himachal.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog 5 -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <a href="https://maverickbird.com/india/north/himachal-pradesh/how-to-enjoy-offbeat-manali-according-to-indias-best-travel-bloggers/" target="_blank">
+            <img src="{{ url_for('static', filename='images/blog5.jpg') }}" class="card-img-top" alt="Maverickbird">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="https://maverickbird.com/india/north/himachal-pradesh/how-to-enjoy-offbeat-manali-according-to-indias-best-travel-bloggers/" target="_blank">
+                Maverickbird – Offbeat Manali Tips
+              </a>
+            </h5>
+            <p class="card-text">Slow travel, spa treats, and local flavors—offbeat ways to enjoy Manali.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog 6 -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <a href="https://www.experiencetravelgroup.com/india/info/shimla" target="_blank">
+            <img src="{{ url_for('static', filename='images/blog6.jpg') }}" class="card-img-top" alt="Shimla Guide">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="https://www.experiencetravelgroup.com/india/info/shimla" target="_blank">
+                Inside Shimla – Hill Station Guide
+              </a>
+            </h5>
+            <p class="card-text">Explore Shimla’s colonial heritage, toy train, Mall Road and scenic day treks.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog 7 -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <a href="https://www.experiencetravelgroup.com/india/info/shimla" target="_blank">
+            <img src="{{ url_for('static', filename='images/blog7.jpg') }}" class="card-img-top" alt="Shimla Again">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="https://www.experiencetravelgroup.com/india/info/shimla" target="_blank">
+                Another Shimla Highlight Guide
+              </a>
+            </h5>
+            <p class="card-text">Delve deeper into what makes Shimla unforgettable—heritage, nature, and more.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="text-center mt-5">
+    <a href="{{ url_for('home') }}" class="btn btn-secondary">← Back to Home</a>
+  </div>
+
+<!-- Footer -->
+  <div class="footer">
+    &copy; 2025 YouthAdventura. All rights reserved. | 📞 +91-78279-56056 | ✉️ info@youthadventura.com
+  </div>
+
+</body>
+</html>
